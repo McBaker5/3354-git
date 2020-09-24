@@ -12,9 +12,20 @@ public class Main {
     }
 
     private static int addArguments(String[] args) {
-    	int ret = Integer.valueOf(args[0]) + Integer.valueOf(args[1]);
-    	for (int i = 2; i < args.length; i ++) {
-    		ret += Integer.valueOf(args[i]);
+    	int ret;
+    	if (args[0].equals("-"))
+    	{
+    		ret = 0 - Integer.valueOf(args[1]) - Integer.valueOf(args[2]);
+    		for (int i = 3; i < args.length; i ++) {
+    			ret -= Integer.valueOf(args[i]);
+    		}
+    	}
+    	else
+    	{
+    		ret = Integer.valueOf(args[0]) + Integer.valueOf(args[1]);
+    		for (int i = 2; i < args.length; i ++) {
+    			ret += Integer.valueOf(args[i]);
+    		}
     	}
         return ret;
     }
