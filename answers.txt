@@ -1,0 +1,6 @@
+(a) 7
+(b) January 24, 2017
+(c) git log prints a history of the repository, printing a log of all commits, including author and the date they were committed. git status prints the current status of your local copy of the repository, showing the number of commits or untracked files you can push.
+(d) Untracked files are files that exist locally but are not part of the git repository. Unstaged files are files that were uncomitted from the repository.
+(e) git checkout lets the user update the state of the repository to that of a specific point during its history. git reset takes a specified commit and changes the working directory, staging index, and commit history to match the state of the repository to the commit.
+(f) When pull is called with uncommited changes, if any remote changes overlap with the uncommited changes, the merge will be canceled and the work tree will be left untouched. 
